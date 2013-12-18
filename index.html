@@ -1,1 +1,106 @@
- 
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Yegeniy.github.io by yegeniy</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Yegeniy.github.io</h1>
+        <p></p>
+
+
+        <p class="view"><a href="https://github.com/yegeniy">View My GitHub Profile</a></p>
+
+      </header>
+      <section>
+        <h2>
+<a name="2013-12-18" class="anchor" href="#2013-12-18"><span class="octicon octicon-link"></span></a>2013-12-18</h2>
+
+<h5>
+<a name="format-clipboard-contents-as-json" class="anchor" href="#format-clipboard-contents-as-json"><span class="octicon octicon-link"></span></a>Format Clipboard contents as JSON</h5>
+
+<div class="highlight highlight-bash"><pre>pbpaste<span class="p">|</span>python -m json.tool
+</pre></div>
+
+<h2>
+<a name="2013-12-04" class="anchor" href="#2013-12-04"><span class="octicon octicon-link"></span></a>2013-12-04</h2>
+
+<h5>
+<a name="article-called-week-of-unix-tools" class="anchor" href="#article-called-week-of-unix-tools"><span class="octicon octicon-link"></span></a><a href="http://www.semicomplete.com/articles/week-of-unix-tools/">Article called 'Week Of Unix Tools'</a>.</h5>
+
+<p>It'll kind of teach you to list what it will teach you:</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">'Day 1: sed</span>
+<span class="s1">Day 2: cut and paste</span>
+<span class="s1">Day 3: awk</span>
+<span class="s1">Day 4: data source tools</span>
+<span class="s1">Day 5: xargs'</span> <span class="p">|</span> cut -d<span class="s1">' '</span> -f 3- <span class="p">|</span> paste -s -d, - <span class="p">|</span> sed -e <span class="s1">'s/,/, /g'</span>
+sed, cut and paste, awk, data <span class="nb">source </span>tools, xargs
+</pre></div>
+
+<h2>
+<a name="2013-12-03" class="anchor" href="#2013-12-03"><span class="octicon octicon-link"></span></a>2013-12-03</h2>
+
+<h5>
+<a name="maven-dependency-analysis" class="anchor" href="#maven-dependency-analysis"><span class="octicon octicon-link"></span></a>Maven Dependency Analysis</h5>
+
+<pre><code>mvn dependency:analyze | less
+</code></pre>
+
+<p><a href="http://maven.apache.org/plugins/maven-dependency-plugin/">It</a> will show you <code>unused declared dependencies</code>, and <code>used undeclared dependencies</code> so you can add or remove dependencies as appropriate. Just don't go crazy with it.</p>
+
+<p>Update: (mis?)Using this introduced some problems into my code because I removed dependencies whose transitive dependencies were being used.</p>
+
+<h2>
+<a name="2013-10-31" class="anchor" href="#2013-10-31"><span class="octicon octicon-link"></span></a>2013-10-31</h2>
+
+<h5>
+<a name="running-a-debugger-on-an-application-running-in-tomcat-using-jpda" class="anchor" href="#running-a-debugger-on-an-application-running-in-tomcat-using-jpda"><span class="octicon octicon-link"></span></a>Running a Debugger on an Application running in Tomcat using JPDA</h5>
+
+<p>Start Tomcat with <code>catalina jpda start</code>. It will start Tomcat so that a remote debugger can be connected to port 8000.</p>
+
+<p>Set up your debugger to run with the following options when the JVM is started:</p>
+
+<pre><code>-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n
+</code></pre>
+
+<p>In IDEA, this done in the Debug Configurations by setting up the "Remote" configuration.</p>
+
+<p><a href="http://wiki.apache.org/tomcat/FAQ/Developing#Q1">http://wiki.apache.org/tomcat/FAQ/Developing#Q1</a>
+<a href="http://stackoverflow.com/questions/11480563/debugging-with-tomcat-and-intellij-community-edition">http://stackoverflow.com/questions/11480563/debugging-with-tomcat-and-intellij-community-edition</a></p>
+
+<h2>
+<a name="2013-10-30" class="anchor" href="#2013-10-30"><span class="octicon octicon-link"></span></a>2013-10-30</h2>
+
+<h5>
+<a name="packaging-a-multi-module-project-with-maven-for-the-first-time" class="anchor" href="#packaging-a-multi-module-project-with-maven-for-the-first-time"><span class="octicon octicon-link"></span></a>Packaging a multi-module project with maven for the first time.</h5>
+
+<p>If you have internal dependencies (e.g. multi-module project), you should run <code>mvn install</code> <em>on that dependency</em> before running <code>mvn package</code> on the multi-module project. At least the first time, to get the dependencies installed into your local repository (under <code>~/.m2/repository/</code>).</p>
+
+<h2>
+<a name="2013-10-22" class="anchor" href="#2013-10-22"><span class="octicon octicon-link"></span></a>2013-10-22</h2>
+
+<h5>
+<a name="fixing-indendation-in-poms" class="anchor" href="#fixing-indendation-in-poms"><span class="octicon octicon-link"></span></a>Fixing indendation in poms</h5>
+
+<pre><code>export XMLLINT_INDENT="   "; for filepath in `find . -name pom.xml |xargs`; do xmllint --format --output $filepath $filepath; done
+</code></pre>
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
