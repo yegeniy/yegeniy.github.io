@@ -16,7 +16,7 @@
     <div class="wrapper">
       <header>
         <h1>Yegeniy.github.io</h1>
-        <p></p>
+        <p>Tricks for the CLI. Mostly bash, os x, java</p>
 
 
         <p class="view"><a href="https://github.com/yegeniy">View My GitHub Profile</a></p>
@@ -24,10 +24,33 @@
       </header>
       <section>
         <h2>
+<a name="2013-12-20" class="anchor" href="#2013-12-20"><span class="octicon octicon-link"></span></a>2013-12-20</h2>
+
+<h5>
+<a name="switch-between-different-versions-of-maven-using-homebrew" class="anchor" href="#switch-between-different-versions-of-maven-using-homebrew"><span class="octicon octicon-link"></span></a>Switch between different versions of maven using <code>homebrew</code>
+</h5>
+
+<p>Assuming you have brew's <code>maven v3.1.1</code> installed, leverage the <code>brew versions</code> command to install maven v3.0.5. </p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>brew unlink maven
+<span class="nv">$ </span>brew versions maven
+<span class="nv">$ </span><span class="nb">cd</span> <span class="sb">`</span>brew --prefix<span class="sb">`</span>
+<span class="c"># b4725ca happens to be the SHA for maven v3.0.5</span>
+<span class="nv">$ </span>git checkout b4725ca Library/Formula/maven.rb
+<span class="nv">$ </span>brew install maven
+</pre></div>
+
+<p>Then, you can switch between both versions at will with <code>brew switch</code>.</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>brew switch maven 3.1.1
+<span class="nv">$ </span>brew switch maven 3.0.5
+</pre></div>
+
+<h2>
 <a name="2013-12-18" class="anchor" href="#2013-12-18"><span class="octicon octicon-link"></span></a>2013-12-18</h2>
 
 <h5>
-<a name="format-clipboard-contents-as-json" class="anchor" href="#format-clipboard-contents-as-json"><span class="octicon octicon-link"></span></a>Format Clipboard contents as JSON</h5>
+<a name="format-os-x-clipboard-contents-as-json" class="anchor" href="#format-os-x-clipboard-contents-as-json"><span class="octicon octicon-link"></span></a>Format OS X Clipboard contents as JSON</h5>
 
 <div class="highlight highlight-bash"><pre>pbpaste<span class="p">|</span>python -m json.tool
 </pre></div>
