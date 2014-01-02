@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Yegeniy.github.io by yegeniy</title>
+    <title>Tricks for the CLI by yegeniy</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -15,8 +15,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Yegeniy.github.io</h1>
-        <p>Tricks for the CLI. Mostly bash, os x, java</p>
+        <h1>Tricks for the CLI</h1>
+        <p>Mostly bash, os x, java</p>
 
 
         <p class="view"><a href="https://github.com/yegeniy">View My GitHub Profile</a></p>
@@ -30,37 +30,7 @@
 <a name="git-commands-i-commonly-use-relevant-ramblings-and-configuration" class="anchor" href="#git-commands-i-commonly-use-relevant-ramblings-and-configuration"><span class="octicon octicon-link"></span></a><a href="https://www.readability.com/articles/kqmddftx"><code>git</code>: commands I commonly use, relevant ramblings, and configuration.</a>
 </h5>
 
-<p>Links to Readability version of <a href="https://gist.github.com/yegeniy/1125520">https://gist.github.com/yegeniy/1125520</a></p>
-
-<h5>
-<a name="function-to-checkout-and-pull-a-git-branch" class="anchor" href="#function-to-checkout-and-pull-a-git-branch"><span class="octicon octicon-link"></span></a>Function to checkout and pull a git branch.</h5>
-
-<p>The bash function below, <code>gcp</code> (git checkout and pull), will check out an up-to-date version of a given branch name, from the <code>origin</code> remote.</p>
-
-<div class="highlight highlight-bash"><pre>gcp<span class="o">()</span> <span class="o">{</span> <span class="k">if</span> <span class="o">[</span> <span class="nv">$1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then </span><span class="nb">echo</span> <span class="s2">"&gt; git checkout ${1}"</span> <span class="o">&amp;&amp;</span> git checkout <span class="nv">$1</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"&gt; git pull origin ${1}"</span> <span class="o">&amp;&amp;</span> git pull origin <span class="nv">$1</span> <span class="o">&amp;&amp;</span> git status -sb<span class="p">;</span> <span class="k">fi</span> <span class="o">}</span>
-</pre></div>
-
-<p>This should fail-fast for most cases. Usage below:</p>
-
-<div class="highlight highlight-bash"><pre>~&gt; gcp master
-&gt; git checkout master
-fatal: Not a git repository <span class="o">(</span>or any parent up to mount parent /Users<span class="o">)</span>
-Stopping at filesystem boundary <span class="o">(</span>GIT_DISCOVERY_ACROSS_FILESYSTEM not <span class="nb">set</span><span class="o">)</span>.
-~&gt; <span class="nb">cd </span>my/repo
-~/my/repo&gt; gcp master
-&gt; git checkout master
-Already on <span class="s1">'master'</span>
-&gt; git pull origin master
-From github.com:yegeniy/yegeniy.github.io
- * branch            master    -&gt; FETCH_HEAD
-Already up-to-date.
-<span class="c">## master</span>
-~/my/repo&gt; gcp fakebranch
-&gt; git checkout fakebranch
-error: pathspec <span class="s1">'fakebranch'</span> did not match any file<span class="o">(</span>s<span class="o">)</span> known to git.
-</pre></div>
-
-<p>This could be extended to work with non-default remotes for the usage <code>gcp remote branch</code>.</p>
+<p>A Readability-wrapped version of <a href="https://gist.github.com/yegeniy/1125520">https://gist.github.com/yegeniy/1125520</a></p>
 
 <h2>
 <a name="2013-12-20" class="anchor" href="#2013-12-20"><span class="octicon octicon-link"></span></a>2013-12-20</h2>
