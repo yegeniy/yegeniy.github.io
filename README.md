@@ -1,6 +1,6 @@
 yegeniy.github.io
 =================
 
-Automatically generated Jekyll Github Pages project
+Jekyll Github Pages project
 
-Anyways, hit http://yegeniy.github.io/
+Hit http://yegeniy.github.io/
