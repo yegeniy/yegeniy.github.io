@@ -21,7 +21,7 @@ int_handler()
 trap 'int_handler' INT
 ```
 
-Get more info on `trap` with:
+Get more info on [`tr`ap](test.html) with:
 
 ```bash
 $ help trap
