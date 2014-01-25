@@ -5,6 +5,27 @@ name: Tricks for the CLI
 tagline: Mostly bash, os x, java
 ---
 
+2014-01-25
+----------
+
+##### Exit from a running script using `Ctrl+C`
+
+```bash
+int_handler()
+{
+    echo "Interrupted."
+    # Kill the parent process of the script.
+    kill $PPID
+    exit 1
+}
+trap 'int_handler' INT
+```
+
+Get more info on `trap` with:
+
+```bash
+$ help trap
+```
 
 2014-01-08
 ----------
