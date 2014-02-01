@@ -73,7 +73,7 @@ A Readability-wrapped version of https://gist.github.com/yegeniy/1125520
 2013-12-20
 ----------
 
-##### Switch between different versions of maven using `homebrew`
+##### Switch between different versions of maven using `homebrew`'s deprecated `versions` command
 
 Assuming you have brew's `maven v3.1.1` installed, leverage the `brew versions` command to install maven v3.0.5. 
 
@@ -94,6 +94,8 @@ $ brew switch maven 3.0.5
 ```
 
 > _Adapted from http://stackoverflow.com/a/4158763/2916086_
+
+_UPDATE_: As the updated title now suggests, `versions` is deprecated and will soon be removed. You can try to do this with `brew tap homebrew/versions && brew search maven` and ...
 
 2013-12-18
 ----------
