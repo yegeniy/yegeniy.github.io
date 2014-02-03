@@ -66,9 +66,9 @@ Even log statements spanning multiple lines will be sorted together. For example
 2014-01-02
 ----------
 
-##### [`git`: commands I commonly use, relevant ramblings, and configuration.](https://www.readability.com/articles/kqmddftx)
+##### [`git`: commands I commonly use, relevant ramblings, and configuration.](https://gist.github.com/yegeniy/1125520)
 
-A Readability-wrapped version of https://gist.github.com/yegeniy/1125520
+https://gist.github.com/yegeniy/1125520
 
 2013-12-20
 ----------
