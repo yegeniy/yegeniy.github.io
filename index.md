@@ -5,7 +5,7 @@ name: Tricks for the CLI
 tagline: Mostly bash, os x, java
 ---
 
-2014-04-27
+2014-02-27
 ----------
 
 ##### Run a java (main) class using maven
