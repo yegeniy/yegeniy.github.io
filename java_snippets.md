@@ -2,7 +2,7 @@
 layout: index
 title: Java Snippets by yegeniy
 name: Java Snippets
-tagline: candidates for utility classes
+tagline: Stuff that's hard to look up<br/>Candidates for utility classes
 ---
 
 2014-05-12
@@ -15,7 +15,7 @@ Package-level annotations apply to all classes in a package and live in
 
 Its specification is at [JLS 7.4.1](http://docs.oracle.com/javase/specs/jls/se7/html/jls-7.html#jls-7.4.1).
 
-You can see an exaample of this in JAXB, which takes advantage of package-level
+You can see an example of this in JAXB, which takes advantage of package-level
 annotations in declaring the default namespace to use in a package. Actually, it
 seems to be mandatory to declare a default namespace in `package-info.java` if
 namespaces used as "markers", but are not backed by an XML schema. (Take that
