@@ -5,7 +5,7 @@ name: Java Snippets
 tagline: Stuff that's hard to look up<br/>Candidates for utility classes
 ---
 
-2014-05-23
+<a name="2014-05-23" href="#2014-05-23">2014-05-23</a>
 ----------
 
 ##### Generate MD5 checksums with `MessageDigest` and `BigInteger`
@@ -43,7 +43,7 @@ private static final ThreadLocal<MessageDigest> messageDigest = new ThreadLocal<
 };
 ```
 
-2014-05-12
+<a name="2014-05-12" href="#2014-05-12">2014-05-12</a>
 ----------
 
 ##### JAXB Namespaces and Package annotations with package-info.java
@@ -108,7 +108,7 @@ coming in. So, if the work you need to do is so expensive that doing it twice
 when you could do it once is prohibitive, consider exploring a more
 sophisticated approach.
 
-2014-03-07
+<a name="2014-03-07" href="#2014-03-07">2014-03-07</a>
 ----------
 
 ##### Keep (main) thread alive using [`Thread::join`](http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#join\(\))

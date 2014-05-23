@@ -5,7 +5,7 @@ name: Tricks for the CLI
 tagline: Mostly bash and java and OS X
 ---
 
-2014-05-09
+<a name="2014-05-09" href="#2014-05-09">2014-05-09</a>
 ----------
 
 ##### Listen to HTTP Requests with `nc -kl <port>`
@@ -28,7 +28,7 @@ space over time; at least, when it can do so. This causes an increase in the
 rate of the incremental garbage collection; however, this is nothing to be
 alarmed at as long as full garbage collection rate does not increase.
 
-2014-04-30
+<a name="2014-04-30" href="#2014-04-30">2014-04-30</a>
 ----------
 
 ##### Increase concurrency in Bash scripts with `wait`
@@ -54,7 +54,7 @@ wait
 echo "we are up"
 ```
 
-2014-02-27
+<a name="2014-02-27" href="#2014-02-27">2014-02-27</a>
 ----------
 
 ##### Run a java (main) class using maven
@@ -75,7 +75,7 @@ well.
 mvn clean compile exec:java -Dexec.mainClass="canonical.name.of.class.Main -Dexec.classpathScope="test"
 ```
 
-2014-02-20
+<a name="2014-02-20" href="#2014-02-20">2014-02-20</a>
 ----------
 
 ##### Undo a release made by maven-release-plugin and git
@@ -126,7 +126,7 @@ b747131 a real commit... the one you want to get back to.
 $ git push origin master # --force
 ```
 
-2014-01-27
+<a name="2014-01-27" href="#2014-01-27">2014-01-27</a>
 ----------
 
 ##### Enable assertions on package tree in java
@@ -144,7 +144,7 @@ $ java -? 2>&1 |grep -A2 -e '-ea'
 So, use `-ea:com.foo...` to enable assertions on `com.foo` and all its subpackages.
 
 
-2014-01-25
+<a name="2014-01-25" href="#2014-01-25">2014-01-25</a>
 ----------
 
 ##### Exit from a running script using `Ctrl+C`
@@ -171,7 +171,7 @@ if a [subsequent] command exits with a non-zero status." That way if you won't
 have to rely on being there to hit `Ctrl+C` when something goes wrong and you
 won't need to rely on `$PPID` being set in `int_handler()` either.
 
-2014-01-08
+<a name="2014-01-08" href="#2014-01-08">2014-01-08</a>
 ----------
 
 ##### Collate multiple log files, chronologically
@@ -184,14 +184,14 @@ $ ls *.log | xargs sort -bsnm | less -S
 
 Even log statements spanning multiple lines will be sorted together. For example, when logging an error's stacktrace, only the first line has the necessary datePattern. The above command should keep most of those multi-line statements together and sort them by using the datePattern of the first line.
 
-2014-01-02
+<a name="2014-01-02" href="#2014-01-02">2014-01-02</a>
 ----------
 
 ##### [`git`: commands I commonly use, relevant ramblings, and configuration.](https://gist.github.com/yegeniy/1125520)
 
 https://gist.github.com/yegeniy/1125520
 
-2013-12-20
+<a name="2013-12-20" href="#2013-12-20">2013-12-20</a>
 ----------
 
 ##### Switch between different versions of maven using `homebrew`
@@ -228,7 +228,7 @@ $ brew switch maven 3.0.5
 
 > _Adapted from http://stackoverflow.com/a/4158763/2916086_
 
-2013-12-18
+<a name="2013-12-18" href="#2013-12-18">2013-12-18</a>
 ----------
 
 ##### Format OS X Clipboard contents as JSON
@@ -237,7 +237,7 @@ $ brew switch maven 3.0.5
 pbpaste|python -m json.tool
 ```
 
-2013-12-04
+<a name="2013-12-04" href="#2013-12-04">2013-12-04</a>
 ----------
 
 ##### [Article called 'Week Of Unix Tools'](http://www.semicomplete.com/articles/week-of-unix-tools/).
@@ -254,7 +254,7 @@ sed, cut and paste, awk, data source tools, xargs
 ```
 
 
-2013-12-03
+<a name="2013-12-03" href="#2013-12-03">2013-12-03</a>
 ----------
 
 ##### Maven Dependency Analysis
@@ -265,7 +265,7 @@ sed, cut and paste, awk, data source tools, xargs
 
 Update: (mis?)Using this introduced some problems into my code because I removed dependencies whose transitive dependencies were being used.
 
-2013-10-31
+<a name="2013-10-31" href="#2013-10-31">2013-10-31</a>
 ----------
 
 ##### Running a Debugger on an Application running in Tomcat using JPDA
@@ -281,7 +281,7 @@ In IDEA, this done in the Debug Configurations by setting up the "Remote" config
 http://wiki.apache.org/tomcat/FAQ/Developing#Q1
 http://stackoverflow.com/questions/11480563/debugging-with-tomcat-and-intellij-community-edition
 
-2013-10-30
+<a name="2013-10-30" href="#2013-10-30">2013-10-30</a>
 ----------
 
 
@@ -289,7 +289,7 @@ http://stackoverflow.com/questions/11480563/debugging-with-tomcat-and-intellij-c
 
 If you have internal dependencies (e.g. multi-module project), you should run `mvn install` _on that dependency_ before running `mvn package` on the multi-module project. At least the first time, to get the dependencies installed into your local repository (under `~/.m2/repository/`).
 
-2013-10-22
+<a name="2013-10-22" href="#2013-10-22">2013-10-22</a>
 ----------
 
 ##### Fixing indendation in poms
