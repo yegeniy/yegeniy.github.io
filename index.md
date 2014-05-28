@@ -5,6 +5,29 @@ name: Tricks for the CLI
 tagline: Mostly bash and java and OS X
 ---
 
+<a name="2014-05-28" href="#2014-05-28">
+2014-05-28
+----------
+</a>
+
+##### Rename files and folders based on pattern
+
+This loop will replace all substrings `old` to `new` for any matching files or
+folders.
+
+```bash
+for i in `find . -path ./skipme -prune -o -name "*old*"`; do
+    echo $i
+    mv $i `echo $i | sed 's/old/new/g'`
+done
+```
+
+The `path ./skipme -prune -o` bit means don't look in the `skipme` directory.
+This isn't perfect, since the `skipme` directory itself could be renamed if
+`-name`'s pattern matched it, but this loop should work well enough for most
+cases.
+
+
 <a name="2014-05-09" href="#2014-05-09">
 2014-05-09
 ----------
