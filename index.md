@@ -12,8 +12,8 @@ tagline: Mostly bash and java and OS X
 
 ##### Rename files and folders based on pattern
 
-This loop will replace all substrings `old` to `new` for any matching files or
-folders.
+This loop will change the first substring `old` to `new` for any matching files
+or folders.
 
 ```bash
 for i in `find . -path ./skipme -prune -o -name "*old*"`; do
@@ -21,6 +21,9 @@ for i in `find . -path ./skipme -prune -o -name "*old*"`; do
     mv $i `echo $i | sed 's/old/new/g'`
 done
 ```
+
+You will need to run it more than once if any of the matching files or folders
+have more than one substring matching `old` (e.g. `my/old/directory/is/old.txt`)
 
 The `path ./skipme -prune -o` bit means don't look in the `skipme` directory.
 This isn't perfect, since the `skipme` directory itself could be renamed if
