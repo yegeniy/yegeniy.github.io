@@ -17,13 +17,14 @@ or folders.
 
 ```bash
 for i in `find . -path ./skipme -prune -o -name "*old*"`; do
-    echo $i
-    mv $i `echo $i | sed 's/old/new/g'`
+    newname=`echo $i | sed 's/old/new/g'`
+    echo $i "->" $newname
+    mv $i $newname
 done
 ```
 
 You will need to run it more than once if any of the matching files or folders
-have more than one substring matching `old` (e.g. `my/old/directory/is/old.txt`)
+have more than one substring matching `old` (e.g. `my/old/directory/is/old.txt`).
 
 The `path ./skipme -prune -o` bit means don't look in the `skipme` directory.
 This isn't perfect, since the `skipme` directory itself could be renamed if
