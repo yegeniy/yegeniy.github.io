@@ -1,7 +1,7 @@
 ---
 layout: index
 title: Java Snippets by yegeniy
-name: Java Snippets
+shorttitle: Java Snippets
 tagline: Stuff that's hard to look up<br/>Candidates for utility classes
 ---
 

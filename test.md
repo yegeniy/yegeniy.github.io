@@ -1,7 +1,7 @@
 ---
 layout: index
 title: Test Title
-name: Test Page
+shorttitle: Test Page
 tagline: a test page
 ---
 

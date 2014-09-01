@@ -1,7 +1,7 @@
 ---
 layout: index
 title: Tricks for the CLI by yegeniy
-name: Tricks for the CLI
+shorttitle: Tricks for the CLI
 tagline: Mostly bash and java and OS X
 ---
 
