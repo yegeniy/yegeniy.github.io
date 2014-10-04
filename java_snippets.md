@@ -37,7 +37,12 @@ single- threaded test framework (JUnit's default) won't get a chance to run your
 clean up methods until you resume.
 
 Usually a test will do the following: set up fixtures (test data), exercise the
-system under test, and clean up the fixtures. Inserting this snippet just before the test framework tears down your fixtures allows you to save yourself the manual work setting up the test data manually and exercising the system by hand steps. and your test framework setting up the test data fixtures set up prior to easily stop a test and explore your application without manually setting up those fixtures:
+system under test, and clean up the fixtures. Inserting this snippet just before
+the test framework tears down your fixtures allows you to save yourself the
+manual work setting up the test data manually and exercising the system by hand
+steps. and your test framework setting up the test data fixtures set up prior to
+easily stop a test and explore your application without manually setting up
+those fixtures:
 
 ```java
 synchronized(this) { wait(); }
@@ -68,21 +73,58 @@ mvn -DforkCount=0 test
 
 [mvntest]: http://maven.apache.org/surefire/maven-surefire-plugin/examples/debugging.html#Non-forked_Tests
 
-<!--
 <a name="2014-08-02" href="#2014-08-02">2014-08-02</a>
 ----------
 
 ##### Generate Boilerplate Classes via Annotation Processing at Compile Time
 
-**This is a draft**
-
 This topic is a little bigger than a snippet, due to the amount of wiring
-required. Please refer to the external links for a more complete treatment.
+required. Please refer to the external links for extended details and examples.
+
+We will use an annotation and an accompanying Annotation Processor, to generate
+Java classes from a Mustache template at compile time. Useful for
+generating boilerplate classes.
 
 Reference: <http://deors.wordpress.com/2011/10/08/annotation-processors/>
 
-Use an annotation and an accompanying Annotation Processor, to generate Java
-classes from a Mustache template at compile time.
+There is a full example stored at
+[java_snippets/2014-08-02](java_snippets/2014-08-02), but it might not be
+accessible. Instead, [learn how](http://git-scm.com/docs/git-bundle) to
+unbundle, the [git bundle](java_snippets/2014-08-02.bundle) of it.
+
+In that example, the
+[`com.example.MyAnnotationProcessor`][MyAnnotationProcessor] class is registered
+as an annotation processor (in
+[`javax.annotation.processing.Processor`][Processor]). Since it supports the
+[`com.example.MarkedForProcessing`][MarkedForProcessing] annotation and
+[`com.example.Thing`][Thing] is annotated with
+[`@MarkedForProcessing`][MarkedForProcessing],
+[`MyAnnotationProcessor`][MyAnnotationProcessor] creates the
+`com.example.GeneratedThing` class used in [`com.example.MainClass`][MainClass].
+
+If running `mvn clean install`, the top-level [`pom.xml`][pom] should compile with
+the proper flags to write `GeneratedThing` into 
+`client/target/generated-sources/annotations/com/example/GeneratedThing.java`.
+As you can figure out from the local variable `template` inside
+`MyAnnotationProcessor::process`, the source code of `GeneratedThing` looks
+like:
+
+```java
+package com.example;
+
+public class GeneratedThing {
+    
+}
+```
+
+[MarkedForProcessing]: java_snippets/2014-08-02/annotations/src/main/java/com/example/MarkedForProcessing.java
+[MainClass]:java_snippets/2014-08-02/client/src/main/java/com/example/MainClass.java
+[MyAnnotationProcessor]: java_snippets/2014-08-02/processors/src/main/java/com/example/MyAnnotationProcessor.java
+[Processor]: java_snippets/2014-08-02/processors/src/main/resources/META-INF/services/javax.annotation.processing.Processor
+[pom]: java_snippets/2014-08-02/pom.xml
+[Thing]: java_snippets/2014-08-02/client/src/main/java/com/example/Thing.java
+
+**A Checklist:**
 
 1) Set up Maven Project for Annotation Processing
 
@@ -91,29 +133,22 @@ kick off the annotation processing.
 
 2) Create Annotation and Annotate your target Types
 
-This is the step that you are most likely already familiar with. Your annotation is created using the `@interface` keyword.
+This is the step that you are most likely already familiar with. Your annotation
+is created using the `@interface` keyword.
 
-3) Template the Generated class with jMustache.
+3) Create a template of the classes to generate
+
+A tool like [jMustache](https://github.com/samskivert/jmustache) can be handy.
 
 4) Use Java's Annotation Processing Tools to Generate the Classes
 
-The `javax.lang.model.*` packages are used to extract information about your annotated types (the class, method, etc.. that you annotated).
-The `javax.annotation.processing` package is used to wire the Annotation and Annotated classes to the Annotation Processor.
-The `javax.tools` package has some useful tooling. For example `JavaFileObject` generates the `.class` file, and `Diagnostic` can be useful for sending messages at compile-time.
-
-pom.xml
-annotations pom.xml
-client pom.xml
-processors pom.xml
-
-annotations src main java com example MarkedForProcessing.java
-client src main java com example MainClass.java
-client src main java com example Thing.java
-processors src main java com example MyAnnotationProcessor.java
-processors src main resources META-INF services javax.annotation.processing.Processor
-src main java com example Bindable.class
-
--->
+* The `javax.lang.model.*` packages are used to extract information about your
+annotated types (the class, method, etc.. that you annotated).
+* The `javax.annotation.processing` package is used to wire the Annotation and
+Annotated classes to the Annotation Processor.
+*  The `javax.tools` package has some useful tooling. For example
+`JavaFileObject` generates the `.class` file, and `Diagnostic` can be useful for
+sending messages at compile-time.
 
 <a name="2014-05-23" href="#2014-05-23">2014-05-23</a>
 ----------
