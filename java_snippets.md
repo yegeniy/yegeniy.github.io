@@ -91,6 +91,7 @@ There is a full example stored at
 [java_snippets/2014-08-02](java_snippets/2014-08-02), but it might not be
 accessible. Instead, [learn how](http://git-scm.com/docs/git-bundle) to
 unbundle, the [git bundle](java_snippets/2014-08-02.bundle) of it.
+    _UPDATE: Looks like github pages doesn't allow for hosting of binary files_
 
 In that example, the
 [`com.example.MyAnnotationProcessor`][MyAnnotationProcessor] class is registered
