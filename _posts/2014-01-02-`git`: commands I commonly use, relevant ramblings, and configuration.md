@@ -1,0 +1,1 @@
+<https://gist.github.com/yegeniy/1125520>

@@ -21,6 +21,13 @@
       </header>
       <section>{{content}}</section>
       <footer>
+     <!--    <h3>Table of Contents:</h3>
+        <div style="border-style: dashed; overflow-y: scroll; height: inherit">
+        {% for post in site.posts %}
+        {% if post.date != post.next.date %}{{post.date | date: "%Y-%m-%d"}}<ul>{% endif %}
+          <li><a href="#{{post.date | date: "%Y-%m-%d"}}">{{post.title}}</a></li>
+        {% if post.date != post.next.date %}</ul>{% endif %}
+        {% endfor %}</div> -->
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
         <p><small>Acknowledgments for the content itself omitted.</small></p>
       </footer>
