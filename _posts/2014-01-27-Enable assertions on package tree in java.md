@@ -1,3 +1,7 @@
+---
+categories: cli java_snippet
+---
+
 Easy to overlook, but you should include ellipses (`...`) after a package
 name, to also enable assertions on it and all its subpackages.
 

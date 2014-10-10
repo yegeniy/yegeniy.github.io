@@ -1,3 +1,7 @@
+---
+category: cli
+---
+
 ```
 $ help wait
 wait: wait [n]

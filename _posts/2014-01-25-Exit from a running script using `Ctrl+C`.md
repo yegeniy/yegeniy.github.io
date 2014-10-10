@@ -1,3 +1,7 @@
+---
+category: cli
+---
+
 ```bash
 int_handler()
 {

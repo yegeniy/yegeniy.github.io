@@ -1,3 +1,7 @@
+---
+category: cli java_snippet
+---
+
 This command is a heuristic so it doesn't really care about the maven-release
 plugin, basically it's supposed to check out the latest master branch, delete
 the local and remote tags, and undo 2 commits.  It assumes that no one has

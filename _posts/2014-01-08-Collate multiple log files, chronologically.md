@@ -1,3 +1,7 @@
+---
+category: cli
+---
+
 Set up your logging so that your log statements start with a very simple [datePattern](http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html), such as `yyyyMMddHHmmssSSS`. Then, you should be able to see a collated view using:
 
 ```bash

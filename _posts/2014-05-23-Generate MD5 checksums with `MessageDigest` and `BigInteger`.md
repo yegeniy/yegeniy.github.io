@@ -1,0 +1,36 @@
+---
+category: java_snippet
+---
+
+```java
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+private String asMD5Checksum(final String original) {
+    final byte[] bytes = original.getBytes("UTF8");
+    try {
+        return new BigInteger(1,
+            MessageDigest.getInstance("MD5").digest()
+        ).toString(16);
+    } catch (NoSuchAlgorithmException e) {
+        throw new RuntimeException(e);
+    }
+}
+```
+
+Consider leveraging `ThreadLocal<MessageDigest>::get()` to avoid instatiating
+`MessageDigest` on every call:
+
+```java
+private static final ThreadLocal<MessageDigest> messageDigest = new ThreadLocal<MessageDigest>() {
+    @Override
+    protected MessageDigest initialValue() {
+        try {
+            return MessageDigest.getInstance("MD5");
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
+    }
+};
+```

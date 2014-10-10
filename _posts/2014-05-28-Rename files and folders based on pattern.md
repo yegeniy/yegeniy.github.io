@@ -1,3 +1,7 @@
+---
+category: cli
+---
+
 This loop will change the first substring `old` to `new` for any matching files
 or folders.
 

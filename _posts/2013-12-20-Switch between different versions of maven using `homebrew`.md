@@ -1,3 +1,7 @@
+---
+category: cli
+---
+
 You can try to do this with something like the following:
 
 ```bash

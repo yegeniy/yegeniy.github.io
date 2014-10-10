@@ -1,3 +1,7 @@
+---
+category: cli
+---
+
 <http://www.semicomplete.com/articles/week-of-unix-tools/>
 
 It'll kind of teach you to list what it will teach you:

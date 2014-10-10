@@ -1,3 +1,7 @@
+---
+category: cli java_snippet
+---
+
 Start Tomcat with `catalina jpda start`. It will start Tomcat so that a remote debugger can be connected to port 8000.
 
 Set up your debugger to run with the following options when the JVM is started:

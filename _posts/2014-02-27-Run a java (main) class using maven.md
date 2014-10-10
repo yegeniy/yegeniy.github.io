@@ -1,3 +1,7 @@
+---
+category: cli java_snippet
+---
+
 [`exec-maven-plugin`](http://mojo.codehaus.org/exec-maven-plugin/java-mojo.html)
 is a quick way to kick off Java scripts in a project that is already
 using Maven.

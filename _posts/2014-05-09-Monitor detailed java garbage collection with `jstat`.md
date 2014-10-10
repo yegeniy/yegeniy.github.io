@@ -1,3 +1,7 @@
+---
+category: cli java_snippet
+---
+
 ```bash
 $ /usr/java/jdk1.7.0_10/bin/jstat -gc -t -h 20 <PID> 5s | tee ~/jstat.out
 ```
