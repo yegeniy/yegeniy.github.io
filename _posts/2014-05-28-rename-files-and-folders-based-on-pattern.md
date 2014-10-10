@@ -1,5 +1,6 @@
 ---
-category: cli
+longtitle: Rename files and folders based on pattern
+categories: cli
 ---
 
 This loop will change the first substring `old` to `new` for any matching files

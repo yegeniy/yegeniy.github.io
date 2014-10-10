@@ -1,5 +1,6 @@
 ---
-category: java_snippet
+longtitle: A Blocking Drain for `BlockingQueue`
+categories: java_snippet
 ---
 
 ```java

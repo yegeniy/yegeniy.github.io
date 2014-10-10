@@ -1,5 +1,6 @@
 ---
-category: java_snippet
+longtitle: Generate Boilerplate Classes via Annotation Processing at Compile Time
+categories: java_snippet
 ---
 
 Use an annotation and an accompanying Annotation Processor, to generate Java

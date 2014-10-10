@@ -14,7 +14,7 @@ tagline: Stuff that's hard to look up<br/>Candidates for utility classes
 </a>
 {% endif %}
 
-##### {{post.title}}
+##### {{post.longtitle}}
 {{post.content}}
 {% endif %}
 {% endfor %}

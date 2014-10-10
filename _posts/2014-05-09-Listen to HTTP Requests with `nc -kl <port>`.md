@@ -1,5 +1,6 @@
 ---
-category: cli
+longtitle: Listen to HTTP Requests with `nc -kl <port>`
+categories: cli
 ---
 
 This is not the best way of listening for HTTP requests, but netcat (`nc`) is

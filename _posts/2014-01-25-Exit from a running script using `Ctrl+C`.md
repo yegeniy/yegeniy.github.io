@@ -1,5 +1,6 @@
 ---
-category: cli
+longtitle: Exit from a running script using `Ctrl+C`
+categories: cli
 ---
 
 ```bash

@@ -1,5 +1,6 @@
 ---
-category: cli java_snippet
+longtitle: Running a Debugger on an Application running in Tomcat using JPDA
+categories: cli java_snippet
 ---
 
 Start Tomcat with `catalina jpda start`. It will start Tomcat so that a remote debugger can be connected to port 8000.

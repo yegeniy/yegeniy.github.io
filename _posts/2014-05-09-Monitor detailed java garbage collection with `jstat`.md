@@ -1,5 +1,6 @@
 ---
-category: cli java_snippet
+longtitle: Monitor detailed java garbage collection with `jstat`
+categories: cli java_snippet
 ---
 
 ```bash

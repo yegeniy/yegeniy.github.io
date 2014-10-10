@@ -1,5 +1,6 @@
 ---
-category: cli
+longtitle: Article called ['Week Of Unix Tools'](http://www.semicomplete.com/articles/week-of-unix-tools/)
+categories: cli
 ---
 
 <http://www.semicomplete.com/articles/week-of-unix-tools/>

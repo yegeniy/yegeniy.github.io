@@ -1,5 +1,6 @@
 ---
-category: java_snippet
+longtitle: Generate MD5 checksums with `MessageDigest` and `BigInteger`
+categories: java_snippet
 ---
 
 ```java

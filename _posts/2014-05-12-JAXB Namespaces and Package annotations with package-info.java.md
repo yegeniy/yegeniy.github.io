@@ -1,5 +1,6 @@
 ---
-category: java_snippet
+longtitle: JAXB Namespaces and Package annotations with package-info.java
+categories: java_snippet
 ---
 
 Package-level annotations apply to all classes in a package and live in

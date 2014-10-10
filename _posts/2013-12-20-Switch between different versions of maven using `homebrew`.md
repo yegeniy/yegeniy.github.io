@@ -1,5 +1,6 @@
 ---
-category: cli
+longtitle: Switch between different versions of maven using `homebrew`
+categories: cli
 ---
 
 You can try to do this with something like the following:

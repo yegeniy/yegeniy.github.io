@@ -1,5 +1,6 @@
 ---
-category: java_snippet
+longtitle: When you have no debugger but do have everything else
+categories: java_snippet
 ---
 
 Consider inserting one of the following snippets in testing code to simulate

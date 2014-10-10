@@ -1,5 +1,6 @@
 ---
-category: cli java_snippet
+longtitle: Undo a release made by maven-release-plugin and git
+categories: cli java_snippet
 ---
 
 This command is a heuristic so it doesn't really care about the maven-release

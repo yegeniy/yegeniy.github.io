@@ -1,5 +1,6 @@
 ---
-category: cli java_snippet
+longtitle: Packaging a multi-module project with maven for the first time
+categories: cli java_snippet
 ---
 
 If you have internal dependencies (e.g. multi-module project), you should run

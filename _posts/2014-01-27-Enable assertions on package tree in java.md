@@ -1,4 +1,5 @@
 ---
+longtitle: Enable assertions on package tree in java
 categories: cli java_snippet
 ---
 

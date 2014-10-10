@@ -14,7 +14,7 @@ tagline: Mostly bash and java and OS X
 </a>
 {% endif %}
 
-##### {{post.title}}
+##### {{post.longtitle}}
 {{post.content}}
 {% endif %}
 {% endfor %}

@@ -1,5 +1,6 @@
 ---
-category: cli java_snippet
+longtitle: Run a java (main) class using maven
+categories: cli java_snippet
 ---
 
 [`exec-maven-plugin`](http://mojo.codehaus.org/exec-maven-plugin/java-mojo.html)

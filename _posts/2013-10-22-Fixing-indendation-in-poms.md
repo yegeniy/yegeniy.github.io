@@ -1,5 +1,6 @@
 ---
-category: cli
+longtitle: Fixing indendation in poms
+categories: cli
 ---
 
 ```bash

@@ -1,5 +1,6 @@
 ---
-category: cli
+longtitle: Increase concurrency in Bash scripts with `wait`
+categories: cli
 ---
 
 ```
