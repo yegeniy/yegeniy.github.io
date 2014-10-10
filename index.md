@@ -6,6 +6,7 @@ tagline: Mostly bash and java and OS X
 ---
 
 {% for post in site.posts %}
+{% if post.categories contains 'cli' %}
 {% if post.date != post.next.date  %}
 <a name="{{post.date | date: "%Y-%m-%d"}}" href="#{{post.date | date: "%Y-%m-%d"}}">
 {{post.date | date: "%Y-%m-%d"}}
@@ -15,4 +16,5 @@ tagline: Mostly bash and java and OS X
 
 ##### {{post.title}}
 {{post.content}}
+{% endif %}
 {% endfor %}
