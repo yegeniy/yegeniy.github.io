@@ -8,7 +8,7 @@ Used undeclared dependencies can be found with `mvn dependency:analyze`
 1. `mvn dependency:analyze`
 2. `mvn dependency:tree -Dincludes=groupId:artifactId:type:version`
 
-How can I see where the code using an undeclared dependency is?
+_How can I see where the code using an undeclared dependency is?_
 
 Exclude the dependency and see what fails.
 
@@ -29,5 +29,4 @@ to your source code. Avoid making your class choices by seeing what's
 available on your IDE's autocomplete menu.
 
 There is also "Transitive Dependency Management", but that's a bit heavy
-handed. See more details in this nice overview:
-<http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:dependency_management_overview>
+handed. See more details in [Gradle's nice overview](http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:dependency_management_overview).
