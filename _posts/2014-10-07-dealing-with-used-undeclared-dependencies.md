@@ -1,7 +1,7 @@
---
+---
 longtitle: Dealing with used undeclared dependencies
 categories: java_snippet
---
+---
 
 Used undeclared dependencies can be found with `mvn dependency:analyze`
 
