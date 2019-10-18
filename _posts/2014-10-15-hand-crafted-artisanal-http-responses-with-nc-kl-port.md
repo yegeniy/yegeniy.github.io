@@ -30,7 +30,8 @@ while true; do echo -e $HTTP_RESPONSE | nc -l $PORT; done
 ```
 would often result in an unexpected EOF error in my client from time to time.
 
-2019-11-17 Update.
+_2019-11-17 Update_:
+
 There is a way to simulate `nc -e` on OS X, but it's 
 [not a one-liner](https://stackoverflow.com/a/24342101/2916086). More like 10.
 
