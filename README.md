@@ -13,6 +13,6 @@ repository | description
 [2]: https://yegeniy.github.io/pss
 [3]: https://yegeniy.github.io/ghostraider
 
-If there is something I can help you with, you can reach out:
-- [✉️] asynchronously at `evulfson@gmail.com`
-- [☎️]  synchronously at `781.632.3780`
+If there is something I can help you with, you can reach out:  
+✉️ asynchronously at `evulfson@gmail.com`  
+☎️  synchronously at `781.632.3780`
