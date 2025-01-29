@@ -1,3 +1,9 @@
+These are all fun personal projects, with a userbase of moi. As such, they lack
+the production readiness of my professional (closed source) work.
+
+If there is something I can help you with, you can reach me asynchronously at
+`evulfson@gmail.com` or synchronously at `781.632.3780`.
+
 repository | description
 -----------|------------
 [résumé][0] | A snippet of literate annotated JavaScript, presented as a twinkling résumé.
@@ -9,9 +15,3 @@ repository | description
 [1]: https://yegeniy.github.io/hydrocarmandias
 [2]: https://yegeniy.github.io/pss
 [3]: https://yegeniy.github.io/ghostraider
-
-These are all fun personal projects, with a userbase of moi. As such, they lack
-the production readiness of my professional (closed source) work.
-
-If there is something I can help you with, you can reach me asynchronously at
-`evulfson@gmail.com` or synchronously at `781.632.3780`.
