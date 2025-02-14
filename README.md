@@ -7,7 +7,7 @@ repository | description
 [hydrocarmandias][1] | A design idea for handwritten diffs, presented as a very modern poem.
 pss \* | (podcast semantic search) A question I had about an old podcast, answered with a little RAG.
 ghostrAIder\* | A novel novel writer that stays focused thanks to some prompt engineering.
-quip\* | (quickly use interpolated prompts) A templated prompting technique for power users, from `ghostrAIder`.
+[quip][4] | (quickly use interpolated prompts) A templated prompting technique for power users, from `ghostrAIder`.
 
 [0]: https://yegeniy.github.io/resume
 [1]: https://yegeniy.github.io/hydrocarmandias
