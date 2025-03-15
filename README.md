@@ -5,7 +5,7 @@ repository | description
 -----------|------------
 [résumé][0] | A snippet of literate annotated JavaScript, presented as a twinkling résumé.
 [hydrocarmandias][1] | A design idea for handwritten diffs, presented as a very modern poem.
-pss \* | (podcast semantic search) A question I had about an old podcast, answered with a little RAG.
+pss \* | (podcast semantic search) A question I had, answered with a little RAG and a lot of transcripts.
 ghostrAIder\* | A novel novel writer that stays focused thanks to some prompt engineering.
 [quip][4] | (quickly use interpolated prompts) A templated prompting technique for power users, from `ghostrAIder`.
 
