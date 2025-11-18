@@ -8,6 +8,7 @@ repository | description
 pss \* | (podcast semantic search) A question answered with a little RAG and a lot of transcripts.
 ghostrAIder\* | A novel novel writer that stays focused thanks to some prompt engineering.
 [quip][4] | (quickly use interpolated prompts) A templated prompting technique for power users, from `ghostrAIder`.
+mathventure \* | A technique to help precocious young book readers want to practice arithmetics.
 
 [0]: https://yegeniy.github.io/resume
 [1]: https://yegeniy.github.io/hydrocarmandias
